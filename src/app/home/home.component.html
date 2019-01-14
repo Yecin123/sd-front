@@ -1,0 +1,20 @@
+
+
+
+<div *ngIf="response==null">
+  <label>
+    Username :
+    <input type="text" [formControl]="username" >
+  </label>
+
+  <label>
+    Password :
+    <input type="password" [formControl]="password" >
+  </label>
+
+  <button (click)="submit()" > login </button>
+</div>
+
+<div *ngIf="response!=null">
+  <div [innerHTML]="response" ></div>
+</div>
